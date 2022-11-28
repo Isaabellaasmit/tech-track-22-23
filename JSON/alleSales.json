@@ -1,0 +1,155 @@
+[
+ {
+   "Year": 2006,
+   "AllSales": 19.1,
+   "Iphone": null,
+   "Ipad": null,
+   "AppleWatch": null,
+   "Airpods": null,
+   "Mac": null
+ },
+ {
+   "Year": 2007,
+   "AllSales": 24.4,
+   "Iphone": null,
+   "Ipad": null,
+   "AppleWatch": null,
+   "Airpods": null,
+   "Mac": null
+ },
+ {
+   "Year": 2008,
+   "AllSales": 37.4,
+   "Iphone": 1.8,
+   "Ipad": null,
+   "AppleWatch": null,
+   "Airpods": null,
+   "Mac": null
+ },
+ {
+   "Year": 2009,
+   "AllSales": 42.7,
+   "Iphone": 13,
+   "Ipad": null,
+   "AppleWatch": null,
+   "Airpods": null,
+   "Mac": 13.6
+ },
+ {
+   "Year": 2010,
+   "AllSales": 65,
+   "Iphone": 25.1,
+   "Ipad": null,
+   "AppleWatch": null,
+   "Airpods": null,
+   "Mac": 17.2
+ },
+ {
+   "Year": 2011,
+   "AllSales": 108,
+   "Iphone": 45.9,
+   "Ipad": 19.1,
+   "AppleWatch": null,
+   "Airpods": null,
+   "Mac": 21.6
+ },
+ {
+   "Year": 2012,
+   "AllSales": 156.3,
+   "Iphone": 78.6,
+   "Ipad": 30.9,
+   "AppleWatch": null,
+   "Airpods": null,
+   "Mac": 23
+ },
+ {
+   "Year": 2013,
+   "AllSales": 170.8,
+   "Iphone": 91.2,
+   "Ipad": 31.9,
+   "AppleWatch": null,
+   "Airpods": null,
+   "Mac": 21.3
+ },
+ {
+   "Year": 2014,
+   "AllSales": 182.6,
+   "Iphone": 101.9,
+   "Ipad": 30.2,
+   "AppleWatch": null,
+   "Airpods": null,
+   "Mac": 23.9
+ },
+ {
+   "Year": 2015,
+   "AllSales": 233.6,
+   "Iphone": 155,
+   "Ipad": 23.2,
+   "AppleWatch": 8.3,
+   "Airpods": null,
+   "Mac": 25.3
+ },
+ {
+   "Year": 2016,
+   "AllSales": 215.4,
+   "Iphone": 136.8,
+   "Ipad": 20.6,
+   "AppleWatch": 11.9,
+   "Airpods": null,
+   "Mac": 22.7
+ },
+ {
+   "Year": 2017,
+   "AllSales": 229,
+   "Iphone": 141.2,
+   "Ipad": 19.2,
+   "AppleWatch": 12.8,
+   "Airpods": 15,
+   "Mac": 25.6
+ },
+ {
+   "Year": 2018,
+   "AllSales": 265.4,
+   "Iphone": 166.2,
+   "Ipad": 18.6,
+   "AppleWatch": 22.5,
+   "Airpods": 35,
+   "Mac": 25.2
+ },
+ {
+   "Year": 2019,
+   "AllSales": 260.1,
+   "Iphone": 142.3,
+   "Ipad": 21.2,
+   "AppleWatch": 30.7,
+   "Airpods": 60,
+   "Mac": 24.7
+ },
+ {
+   "Year": 2020,
+   "AllSales": 274.3,
+   "Iphone": 137.7,
+   "Ipad": 23.7,
+   "AppleWatch": 43.1,
+   "Airpods": 114,
+   "Mac": 28.4
+ },
+ {
+   "Year": 2021,
+   "AllSales": 365.8,
+   "Iphone": 191.9,
+   "Ipad": 31.8,
+   "AppleWatch": 46.1,
+   "Airpods": 85,
+   "Mac": 35.1
+ },
+ {
+   "Year": 2022,
+   "AllSales": 394.3,
+   "Iphone": 205.4,
+   "Ipad": 29.2,
+   "AppleWatch": null,
+   "Airpods": null,
+   "Mac": 40
+ }
+]

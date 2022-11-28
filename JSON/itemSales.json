@@ -1,0 +1,252 @@
+[
+ {
+   "item": "Iphone",
+   "year": 2008,
+   "sales": 11.6
+ },
+ {
+   "item": "Iphone",
+   "year": 2009,
+   "sales": 20.7
+ },
+ {
+   "item": "Iphone",
+   "year": 2010,
+   "sales": 39.9
+ },
+ {
+   "item": "Iphone",
+   "year": 2011,
+   "sales": 72.3
+ },
+ {
+   "item": "Iphone",
+   "year": 2012,
+   "sales": 125
+ },
+ {
+   "item": "Iphone",
+   "year": 2013,
+   "sales": 150.2
+ },
+ {
+   "item": "Iphone",
+   "year": 2014,
+   "sales": 169.2
+ },
+ {
+   "item": "Iphone",
+   "year": 2015,
+   "sales": 231.2
+ },
+ {
+   "item": "Iphone",
+   "year": 2016,
+   "sales": 211.8
+ },
+ {
+   "item": "Iphone",
+   "year": 2017,
+   "sales": 216.7
+ },
+ {
+   "item": "Iphone",
+   "year": 2018,
+   "sales": 217.7
+ },
+ {
+   "item": "Iphone",
+   "year": 2019,
+   "sales": 187.2
+ },
+ {
+   "item": "Iphone",
+   "year": 2020,
+   "sales": 196.9
+ },
+ {
+   "item": "Iphone",
+   "year": 2021,
+   "sales": 242
+ },
+ {
+   "item": "Ipad",
+   "year": 2011,
+   "sales": 32.3
+ },
+ {
+   "item": "Ipad",
+   "year": 2012,
+   "sales": 58.1
+ },
+ {
+   "item": "Ipad",
+   "year": 2013,
+   "sales": 97
+ },
+ {
+   "item": "Ipad",
+   "year": 2014,
+   "sales": 67.9
+ },
+ {
+   "item": "Ipad",
+   "year": 2015,
+   "sales": 53.8
+ },
+ {
+   "item": "Ipad",
+   "year": 2016,
+   "sales": 45.5
+ },
+ {
+   "item": "Ipad",
+   "year": 2017,
+   "sales": 43.7
+ },
+ {
+   "item": "Ipad",
+   "year": 2018,
+   "sales": 43.5
+ },
+ {
+   "item": "Ipad",
+   "year": 2019,
+   "sales": 45.2
+ },
+ {
+   "item": "Ipad",
+   "year": 2020,
+   "sales": 71.1
+ },
+ {
+   "item": "Ipad",
+   "year": 2021,
+   "sales": 57.8
+ },
+ {
+   "item": "AppleWatch",
+   "year": 2015,
+   "sales": 8.3
+ },
+ {
+   "item": "AppleWatch",
+   "year": 2016,
+   "sales": 11.9
+ },
+ {
+   "item": "AppleWatch",
+   "year": 2017,
+   "sales": 12.8
+ },
+ {
+   "item": "AppleWatch",
+   "year": 2018,
+   "sales": 22.5
+ },
+ {
+   "item": "AppleWatch",
+   "year": 2019,
+   "sales": 30.7
+ },
+ {
+   "item": "AppleWatch",
+   "year": 2020,
+   "sales": 43.1
+ },
+ {
+   "item": "AppleWatch",
+   "year": 2021,
+   "sales": 46.1
+ },
+ {
+   "item": "AirPods",
+   "year": 2017,
+   "sales": 15
+ },
+ {
+   "item": "AirPods",
+   "year": 2018,
+   "sales": 35
+ },
+ {
+   "item": "AirPods",
+   "year": 2019,
+   "sales": 60
+ },
+ {
+   "item": "AirPods",
+   "year": 2020,
+   "sales": 114
+ },
+ {
+   "item": "AirPods",
+   "year": 2021,
+   "sales": 85
+ },
+ {
+   "item": "Mac",
+   "year": 2009,
+   "sales": 10.3
+ },
+ {
+   "item": "Mac",
+   "year": 2010,
+   "sales": 13.4
+ },
+ {
+   "item": "Mac",
+   "year": 2011,
+   "sales": 16.5
+ },
+ {
+   "item": "Mac",
+   "year": 2012,
+   "sales": 18
+ },
+ {
+   "item": "Mac",
+   "year": 2013,
+   "sales": 16.1
+ },
+ {
+   "item": "Mac",
+   "year": 2014,
+   "sales": 18.8
+ },
+ {
+   "item": "Mac",
+   "year": 2015,
+   "sales": 20.4
+ },
+ {
+   "item": "Mac",
+   "year": 2016,
+   "sales": 18.3
+ },
+ {
+   "item": "Mac",
+   "year": 2017,
+   "sales": 18.9
+ },
+ {
+   "item": "Mac",
+   "year": 2018,
+   "sales": 18
+ },
+ {
+   "item": "Mac",
+   "year": 2019,
+   "sales": 17.5
+ },
+ {
+   "item": "Mac",
+   "year": 2020,
+   "sales": 20.2
+ },
+ {
+   "item": "Mac",
+   "year": 2021,
+   "sales": 25.7
+ }
+]

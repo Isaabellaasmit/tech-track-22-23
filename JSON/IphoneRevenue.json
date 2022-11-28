@@ -1,0 +1,177 @@
+[
+ {
+   "Country": "America",
+   "Year": 2015,
+   "Revenue": 70.3
+ },
+ {
+   "Country": "America",
+   "Year": 2016,
+   "Revenue": 62.9
+ },
+ {
+   "Country": "America",
+   "Year": 2017,
+   "Revenue": 69.3
+ },
+ {
+   "Country": "America",
+   "Year": 2018,
+   "Revenue": 74.8
+ },
+ {
+   "Country": "America",
+   "Year": 2019,
+   "Revenue": 65.7
+ },
+ {
+   "Country": "America",
+   "Year": 2020,
+   "Revenue": 73.3
+ },
+ {
+   "Country": "America",
+   "Year": 2021,
+   "Revenue": 84.3
+ },
+ {
+   "Country": "Europe",
+   "Year": 2015,
+   "Revenue": 33.9
+ },
+ {
+   "Country": "Europe",
+   "Year": 2016,
+   "Revenue": 34.6
+ },
+ {
+   "Country": "Europe",
+   "Year": 2017,
+   "Revenue": 36.8
+ },
+ {
+   "Country": "Europe",
+   "Year": 2018,
+   "Revenue": 38.2
+ },
+ {
+   "Country": "Europe",
+   "Year": 2019,
+   "Revenue": 36.3
+ },
+ {
+   "Country": "Europe",
+   "Year": 2020,
+   "Revenue": 37.3
+ },
+ {
+   "Country": "Europe",
+   "Year": 2021,
+   "Revenue": 56.1
+ },
+ {
+   "Country": "China",
+   "Year": 2015,
+   "Revenue": 71.2
+ },
+ {
+   "Country": "China",
+   "Year": 2016,
+   "Revenue": 58.3
+ },
+ {
+   "Country": "China",
+   "Year": 2017,
+   "Revenue": 51.6
+ },
+ {
+   "Country": "China",
+   "Year": 2018,
+   "Revenue": 44.8
+ },
+ {
+   "Country": "China",
+   "Year": 2019,
+   "Revenue": 31.4
+ },
+ {
+   "Country": "China",
+   "Year": 2020,
+   "Revenue": 34.9
+ },
+ {
+   "Country": "China",
+   "Year": 2021,
+   "Revenue": 42.9
+ },
+ {
+   "Country": "Japan",
+   "Year": 2015,
+   "Revenue": 15
+ },
+ {
+   "Country": "Japan",
+   "Year": 2016,
+   "Revenue": 14.6
+ },
+ {
+   "Country": "Japan",
+   "Year": 2017,
+   "Revenue": 15.3
+ },
+ {
+   "Country": "Japan",
+   "Year": 2018,
+   "Revenue": 14.9
+ },
+ {
+   "Country": "Japan",
+   "Year": 2019,
+   "Revenue": 14.8
+ },
+ {
+   "Country": "Japan",
+   "Year": 2020,
+   "Revenue": 14.7
+ },
+ {
+   "Country": "Japan",
+   "Year": 2021,
+   "Revenue": 17.8
+ },
+ {
+   "Country": "Rest of Asia",
+   "Year": 2015,
+   "Revenue": 38.8
+ },
+ {
+   "Country": "Rest of Asia",
+   "Year": 2016,
+   "Revenue": 40.2
+ },
+ {
+   "Country": "Rest of Asia",
+   "Year": 2017,
+   "Revenue": 44.1
+ },
+ {
+   "Country": "Rest of Asia",
+   "Year": 2018,
+   "Revenue": 46.1
+ },
+ {
+   "Country": "Rest of Asia",
+   "Year": 2019,
+   "Revenue": 39.6
+ },
+ {
+   "Country": "Rest of Asia",
+   "Year": 2020,
+   "Revenue": 41.2
+ },
+ {
+   "Country": "Rest of Asia",
+   "Year": 2021,
+   "Revenue": 40.9
+ }
+]
