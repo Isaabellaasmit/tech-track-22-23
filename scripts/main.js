@@ -34,66 +34,8 @@ console.log('Hello, world!');
 
 
 
-// const xScale = d3.scaleBand()
-//                 .domain([0, d3.max(dataItems, (d) => d[1])])
-//                 .range([0, chartWidth])
-
-// const yScale = d3.scaleLinear()
-//                 .domain([0, d3.max(dataItems, (d) => [2])])
-//                 .range([0, chartHeight])
-
-//     d3.select("#bars")
-//         .selectAll("rect")
-//         .data(dataItems)
-//         .join("rect")
-//         .attr("height", d => yScale(d.sales))
-//         .attr("width", 25)
-//         .attr("x", d => xScale(d[1] + 15))
-
-//     d3.select('#labels')
-//     .selectAll('text')
-//     .data(dataItems)
-//     .join('text')
-//     .attr('x', d => xScale(dataItems, (d) => d[1]) + 20)
-//     .text(d => d.year);
-
-
-// var data = [
-//     { "year": 2011, "value": 45 }, { "year": 2012, "value": 47 }, { "year": 2013, "value": 52 }, { "year": 2014, "value": 70}, { "year": 2015, "value": 75}, { "year": 2016, "value": 78}
-// ]
-
-// function drawChart(dataItems){
-    
-// }
-
-// function updateChart(appleItem) {
-//   appleItem = String(appleItem);
-//   const dataItems = filterData(appleItem);
-//   drawChart(dataItems);
-// }
-
 // d3.json("../JSON/itemSales.json").then(d => {
 //     makeChart(d)
-
-//     return dataItems.filter((d) => d.item === appleItem);
-    
-// })
-// console.log(appleItem)
-
-// function makeChart(products) {
-
-//   console.log(products)
-// }
-
-
-
-
-// DIT IS VOOR DE CHART
-
-// var chart = d3.select("svg"),
-// var margin = 200,
-// width = chart.attr("width") - margin,
-// height = chart.attr("height") - margin
 
 
 // OM TE FILTEREN
@@ -116,26 +58,13 @@ function makeChart(dataItems) {
 
   console.log(dataItems);
 
-//   dataItems = dataItems.filter(item => {
-//     return item.item === 'Iphone';
-//   })
-
-  console.log(dataItems);
-
   const margin = 200
 
-
-
   const chart = d3.select("svg")
-            
-
-  
 
   const chartWidth = chart.attr("width") - margin
   const chartHeight = chart.attr("height") - margin
 
-  // var width = chart.attr("width") - margin
-  // var height = chart.attr("height") - margin
 
   const  xScale = d3.scaleBand()
                     .domain(dataItems.map((d) =>d.year))
@@ -146,12 +75,22 @@ function makeChart(dataItems) {
                    .range([chartHeight, 0])
                    .domain([0, d3.max(dataItems, (d) => d.sales)])
 
+  const axisLeft = d3.axisLeft(yScale)
+                     .tickFormat((d) => d)
+                     .ticks(10)
+  
+  const axisBottom = d3.axisBottom(xScale)
+                       .tickFormat((d) => d)
+                       .ticks(10)
+
 
   d3.select("#titel")
-    .append("text")
+    .selectAll("text")
+    .data(dataItems)
+    .join("text")
     .attr("transform", "translate(100,50)")
     .attr("font-size", "20px")
-    .text("Straks komt hier data :)")
+    .text((d) => "Verkoopcijfers van " + d.item)
   
 
   d3.select("#bars")
@@ -167,46 +106,6 @@ function makeChart(dataItems) {
     .attr("transform", "translate(" + 100 + "," + 100 + ")")
 
 
-  // chart.append("text")
-  //       .attr("transform", "translate(100,0)")
-  //       .attr("x", 50)
-  //       .attr("y", 50)
-  //       .attr("font-size", "24px")
-  //       .text("Ugly bar chart")
-
-
-
-      // var g = chart.append("g")
-      //       .attr("transform", "translate(" + 100 + "," + 100 + ")");
-
-
-  // const axisBottom = d3.axisBottom(scaleBand).tickFormat((d) => d.slice(0, 2));
-  // d3.select("#scaleBottom")
-  //   .call(axisBottom);
-
-  // d3.select("#scaleBottom")
-  //   .call(axisBottom(xScale))
-  //   .attr("transform", "translate(0," + chartHeight + ")")
-  //   .attr("y", chartHeight - 250)
-  //   .attr("x", chartWidth - 100) 
-  //   .attr("text-anchor", "start")
-
-  // d3.select("#labelsBottom")
-  //   .append("text")
-  //   .data(dataItems)
-  //   .text( (d) => d.item)
-
-
-    const axisBottom = d3.axisBottom(xScale)
-                         .tickFormat((d) => d)
-                         .ticks(10)
-                         
-                        //  .tickFormat((d) => d + "m") // (s) => s.slice(0, 2));
-    
-    // const axisLeft = d3.axixLeft(yScale)
-    //                    .tickFormat((d) => d)
-
-
     d3.select("#scaleBottom")
       .call(axisBottom)
 
@@ -217,82 +116,188 @@ function makeChart(dataItems) {
       .attr("y", chartHeight + 150)
       .attr("x", chartWidth + 70)
    
-    // d3.select("#scaleLeft")
-    //   .call(axisLeft)
-
-    const axisLeft = d3.axisLeft(yScale)
-                       .tickFormat((d) => d)
-                       .ticks(10)
     
     d3.select("#scaleLeft") 
       .call(axisLeft)
-      // .attr("transform", "rotate(-90)")             
+      
 
-      // g.append("g")
-      // .call(d3.axisLeft(yScale).tickFormat((d) => d + "m").ticks(10))
-      // .append("text")
-      // .attr("transform", "rotate(-90)")
-      // .attr("y", 6)
-      // .attr("dy", "-5.1em")
-      // .attr("text-anchor", "end")
-      // .attr("stroke", "black")
-      // .text("Sales van Apple in miljarden");
+    d3.select("#labelsLeft")
+    .selectAll("text")
+    .data(dataItems)
+    .join("text")
+    .text("Verkoopaantallen in miljarden") // (d) => "Verkoopcijfers  " + d.item) 
+    .attr("transform", "rotate(-90)")
+    .attr("y", 6)
+    .attr("dy", "-5.1em")
 
-      // d3.select("#labelsBottom")
-      //   .append("text")
-      //   .attr("y", chartHeight - 250)
-      //   .attr("x", chartWidth - 100)
-      //   .attr("text-anchor", "end")
-      //   .attr("stroke", "black")
-      //   .text("Jaar");
-
-      // d3.select("#scaleBottom")
-      // // .append("g")
-      // .attr("transform", "translate(0," + chartHeight + ")")
-      // .call(d3.axisBottom(xScale))
-
-
-
-      // g.append("g")
-      // .attr("transform", "translate(0," + chartHeight + ")")
-      // .call(d3.axisBottom(xScale))
-      // .append("text")
-      // .attr("y", chartHeight - 250)
-      // .attr("x", chartWidth - 100)
-      // .attr("text-anchor", "end")
-      // .attr("stroke", "black")
-      // .text("Jaar");
-
-
-
-      // g.selectAll(".bar")
-      // .data(dataItems)
-      // .join("rect")
-      // .attr("class", "bar")
-      // .attr("x", (d) => xScale(d.year))
-      // .attr("y", (d) => yScale(d.sales))
-      // .attr("width", xScale.bandwidth())
-      // .attr("height", (d) => chartHeight - yScale(d.sales));
 
 }
 
  window.addEventListener('DOMContentLoaded', (e) => {
-      d3.selectAll("button").on("click", (e) => 
+      d3.selectAll("#items button").on("click", (e) => 
       getData(e.target.value));
-      getData(1);
+      getData("Iphone");
   });
+
+// EventListener
+function changeMap(e) {
+  // d3.select("#australia, #china, #japan, #europe, #restOfAzia, #africa, #america")
+  //   .attr("fill", "black")
+  d3.select("#australia")
+    .attr("fill", "black")
+
+  d3.select("#america")
+    .attr("fill", "black")
+
+  d3.select("#china")
+    .attr("fill", "black")
+
+  d3.select("#japan")
+    .attr("fill", "black")
+
+  d3.select("#europe") 
+    .attr("fill", "black") 
+  
+  d3.select("#restOfAsia")
+    .attr("fill", "black")
+  
+  d3.select("#africa")
+    .attr("fill", "black")
+  
+
+  let myLand = "#" + e.target.value;
+
+  let myColor = "var(--color-" + e.target.value; 
+
+  d3.select(myLand)
+    .attr("fill", myColor)
+    .transition()
+    .duration(1000)
+
+  
+}
+
+// changeMap("africa");
+
+const buttons = document.querySelectorAll('#mapButtons');
+
+buttons.forEach(button => {
+	button.addEventListener('click', changeMap);
+  
+})
+
+// document.querySelector("body > form").addEventListener('change', function(event){
+//   document.querySelector(".👨‍🦲").dataset.mood = event.target.value;
+// });
+
+
+
+
+// function handleClick(event) {
+// 	document.body.style.backgroundColor = event.target.innerHTML
+// 	console.log(event.target.innerHTML);
+// }
+
+
+
+
+
+
+// // FILTER VOOR BIJ DE MAP
+
+// function getDataForMap(mapFunction) {
+//   d3.json("../JSON/AppleRevenue.json").then(d => {
+
+//     if(mapFunction) {
+//         d = d.filter(item => {
+//           return item.Country === mapFunction;
+//         })
+//     } 
+//     showMap(d)
+// })
+// }
+
+function moreData(filterMap) {
+  d3.json("../JSON/AppleRevenue.json").then(d => {
+
+    if(filterMap) {
+        d = d.filter(item => {
+          return item.Country === filterMap;
+        })
+    } 
+    showMap(d)
+})
+}
+
+// import appleData from '/JSON/AppleRevenue.json' assert {type: "json"};
+
+function showMap(appleData) {
+
+    console.log(appleData);
+
+const chartWidth = 700
+const chartHeight = 800
+
+const xScale = d3.scaleLinear()
+.domain([0, d3.max(appleData, d => d.Revenue)])
+.range([0, chartWidth]);
+
+const yScale = d3.scaleBand()
+.domain(d3.map(appleData, d => d.Year))
+.range([0, chartHeight])
+.paddingInner(0.05);
+
+d3.select('#bars')
+.selectAll('rect')
+.data(appleData)
+.join('rect')
+.attr('height', yScale.bandwidth())
+.attr('width', d => xScale(d.Revenue))
+.attr('y', d => yScale(d.Year))
+
+d3.select('#labels')
+.selectAll('text')
+.data(appleData)
+.join('text')
+.attr('y', d => yScale(d.Year) + 15)
+.text(d => d.Year);
+
+}
+
+// showMap("africa")
+
+
+
+window.addEventListener('DOMContentLoaded', (e) => {
+  d3.selectAll("#mapButtons").on("click", (e) => 
+  moreData(e.target.value));
+  moreData("africa");
+});
+
 
   
   // var iphoneButton = document.querySelector(".1")
 
   // function iphoneFuntie() {
-
+  //  console.log("button1")
   // }
 
 
+// funtion handleClick() {
+
+// }
+
+// buttons.forEach(button => {
+//     button.addEventListener("click", handleClick)
+// })
+
+// function handleClick(event) {
+//      console.log(event, target )
+// }
 
 
 
+// const buttons = document.querySelectorAll("buttons")
     
 
 
@@ -338,8 +343,6 @@ function makeChart(dataItems) {
 
   // }
   
- 
-
 
 
 
@@ -432,48 +435,4 @@ function makeChart(dataItems) {
 //                                      return color[1];
 //                                 });
 
-// svg.selectAll("rect")
-//     .data(itemSales)
-//     .enter()
-//     .append("rect")
-//     .attr("x", (d, i) => i * 30)
-//     .attr("y", (d, i) => h - 3 * d.sales)
-//     .attr("width", 25)
-//     .attr("height", (d, i) => 3 * d.sales)
-//     .attr("fill", "black")
-
-// svg.selectAll("text")
-//     .data(itemSales)
-//     .enter()
-//     .append("text")
-//     .attr('x', (d, i) => i * 30)
-//     .attr('x', (d, i) => chartHeight - 3 * d.year - 3)
-//     .text((d, i) => d.year)
-
-
-//const xScale = d3.scaleLinear()
-//	.domain([0, d3.max(itemSales, d => d.sales)])
-//	.range([0, chartHeight]);
-
-//const yScale = d3.scaleBand()
-//	.domain(d3.map(itemSales, d => d.year))
-//	.range([0, chartWidth])
-//  .paddingInner(0.05);
-
-//d3.select('#bars')
- // .selectAll('rect')
- // .data(itemSales)
- // .join('rect')
- // .attr('height', 25) //yScale.bandwith())
- // .attr('width', d => xScale(d.sales))
- // .attr('y', d => yScale(d.year))
- // .classed('animate__animated animate__headShake animate__infinite', () => Math.random() > 0.8)
-  //.classed('animate__slower', () => Math.random() > 0.5)
-
-//d3.select('#labels')
- // .selectAll('text')
- // .data(itemSales)
- // .join('text')
- // .attr('y', d => yScale(d.year) + 15)
- // .text(d => d.year);
 
