@@ -41,7 +41,7 @@ console.log('Hello, world!');
 // OM TE FILTEREN
 
 function getData(filterFunction) {
-  d3.json("../JSON/itemSales.json").then(d => {
+  d3.json("../public/JSON/itemSales.json").then(d => {
 
     if(filterFunction) {
         d = d.filter(item => {
@@ -218,7 +218,7 @@ buttons.forEach(button => {
 // }
 
 function moreData(filterMap) {
-  d3.json("../JSON/AppleRevenue.json").then(d => {
+  d3.json("../public/JSON/AppleRevenue.json").then(d => {
 
     if(filterMap) {
         d = d.filter(item => {
