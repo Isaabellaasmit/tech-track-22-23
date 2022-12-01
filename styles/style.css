@@ -71,7 +71,71 @@ h1 {
 
 
 /****************************************************************/
-/*                        MAIN SVG OPMAAK                       */
+/*                       LAPTOP + ELEMENTS                      */
+/****************************************************************/
+
+
+button #on {
+  display: flex;
+  justify-content: center;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#overlay {
+  position: relative;
+
+  margin-bottom: 20em;
+}
+
+#overlay img {
+  width: 100%;
+  height: auto;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#overlay div.screen {
+  height: 598px;
+  width: 892px;
+
+  border-radius: 28px;
+
+  margin-left: 2em;
+
+  background-color: black;
+
+  position: absolute;
+  top: 3.1em;
+  left: 15.2em;
+
+
+}
+
+#overlay div.screen.uit {
+  display: none;
+}
+
+#overlayButtons {
+  position: relative;
+}
+
+.items {
+  position: absolute;
+
+  top: 37em;
+  left: 36em;
+
+
+}
+
+
+
+/****************************************************************/
+/*                           CHART 1                            */
 /****************************************************************/
 
 
@@ -80,6 +144,20 @@ h1 {
   font-size: 12pt;
   text-anchor: start;
 }
+
+#chart1 {
+  margin-left: 26em;
+  margin-top: 5.5em;
+}
+
+
+/****************************************************************/
+/*                           CHART 2                            */
+/****************************************************************/
+
+
+
+
 
 #mapSvg {
   margin-top: 4em;

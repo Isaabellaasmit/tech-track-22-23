@@ -10,24 +10,43 @@
   <body>
     <main>
 
-      <h1>Cijfers van Apple</h1>
+      <h1>Have you tried turn off and on again?</h1>
 
-      <svg viewbox="0 0 600 500"  width="600" height="500">
-        <g id="titel"></g>
-        <g id="bars" ></g>
-        <g id="labelsBottom"></g>
-        <g id="labelsLeft" transform="translate(120, 290)"></g>      
-        <g id="scaleBottom" transform="translate(100, 400)"></g>
-        <g id="scaleLeft" transform="translate(100, 100)"></g>
-      </svg>
+      <button id="on">ON</button>
 
-      <div id="items">
-        <button value="Iphone">Iphone</button>
-        <button value="Ipad">Ipad</button>
-        <button value="AppleWatch">Apple Watch</button>
-        <button value="AirPods">Airpods</button>
-        <button value="Mac">Mac</button>
-      </div>
+      <!-- Dit is voor de laptop en alle elementen in de laptop -->
+        <section id="overlay">
+          <img id="laptop" src="images/Laptop.svg" alt="SVG geanimeerde Laptop">
+
+          <svg id="chart1" viewbox="0 0 600 500"  width="600" height="500">
+            <g id="titel"></g>
+            <g id="bars" ></g>
+            <g id="labelsBottom"></g>
+            <g id="labelsLeft" transform="translate(120, 290)"></g>      
+            <g id="scaleBottom" transform="translate(100, 400)"></g>
+            <g id="scaleLeft" transform="translate(100, 100)"></g>
+          </svg>
+
+          <div class="items">            <button value="Iphone">Iphone</button>
+            <button value="Ipad">Ipad</button>
+            <button value="AppleWatch">Apple Watch</button>
+            <button value="AirPods">Airpods</button>
+            <button value="Mac">Mac</button>
+          </div>
+
+          <div class="screen"></div>
+          
+        </section>
+
+
+      
+
+      <!-- <article>
+        <p class="p1">&hellip;en ik verplaats&hellip;</p>
+        <p class="p2">en ik ook.</p>
+        <button class="klik">Klik op mij&hellip;</button>
+      </article> -->
+
 
       <!-- <svg width="800" height="800">
         <g id="bars" transform="translate(90, 0)">

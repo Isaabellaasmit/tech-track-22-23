@@ -28,14 +28,30 @@ console.log('Hello, world!');
 //     console.log(products)
 // }
 
-// const chartWidth = 800
-// const chartHeight = 800
-
-
-
 
 // d3.json("../JSON/itemSales.json").then(d => {
 //     makeChart(d)
+
+
+/* same same */
+// var deNegendeButton = document.querySelector(".klik");\
+  let laptopButton = document.querySelector("#on");
+
+  laptopButton.addEventListener("click", schermUit);
+
+  function schermUit() {
+    let hetScherm = document.querySelector("#overlay div.screen");
+    hetScherm.classList.toggle("uit")
+  }
+
+// /* same same */
+// deNegendeButton.addEventListener("click", veranderDeNegendePs);
+
+// /* same same */
+// function veranderDeNegendePs() {
+//   let hetNegendeBlokje = document.querySelector("article");
+//   hetNegendeBlokje.classList.toggle("anders");
+// }
 
 
 // OM TE FILTEREN
@@ -60,7 +76,7 @@ function makeChart(dataItems) {
 
   const margin = 200
 
-  const chart = d3.select("svg")
+  const chart = d3.select("#chart1")
 
   const chartWidth = chart.attr("width") - margin
   const chartHeight = chart.attr("height") - margin
@@ -135,7 +151,7 @@ function makeChart(dataItems) {
 }
 
  window.addEventListener('DOMContentLoaded', (e) => {
-      d3.selectAll("#items button").on("click", (e) => 
+      d3.selectAll("div.items button").on("click", (e) => 
       getData(e.target.value));
       getData("Iphone");
   });
@@ -221,8 +237,7 @@ buttons.forEach(button => {
 
 
 
-// import appleData from '/public/JSON/AppleRevenue.json' assert {type: "json"};
-// console.log(appleData);
+
 
 // const appleData = Object.entries(dataRevenue);
 
@@ -247,6 +262,9 @@ buttons.forEach(button => {
 // })
 // }
 
+// import appleData from '/public/JSON/AppleRevenue.json' assert {type: "json"};
+// console.log(appleData);
+
 d3.json("../public/JSON/AppleRevenue.json").then(d => {
 
     showMap(d)
@@ -262,9 +280,11 @@ const secondChartWidth = 800
 const secondChartHeight = 400
 
 const xSchaal = d3.scaleLinear()
-// .domain([0, d3.max(appleData, d => d.Revenue)]) d3.max(d3.values(d.years)
+// .domain([0, d3.max(appleData, d => d.Revenue)]) //d3.max(d3.values(d.years)
 .range([0, secondChartWidth])
-.domain([0, (d3.max(appleData, d => d.Revenue))])      //(appleData, (d) => d[2])]) Object.values(
+.domain([0, (d3.max(appleData, d => d.Revenue))])      //(d3.max(Object.values(appleData), d => d.Revenue))]) 
+
+  console.log(typeof appleData);
 
 const ySchaal = d3.scaleBand()
 .domain(d3.map(appleData, d => d.Year))
