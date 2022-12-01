@@ -1,0 +1,157 @@
+[
+ {
+   "country": "Amerika",
+   "year": 2015,
+   "revenue": 93.8
+ },
+ {
+   "country": "Amerika",
+   "year": 2016,
+   "revenue": 86.6
+ },
+ {
+   "country": "Amerika",
+   "year": 2017,
+   "revenue": 96.6
+ },
+ {
+   "country": "Amerika",
+   "year": 2018,
+   "revenue": 112
+ },
+ {
+   "country": "Amerika",
+   "year": 2019,
+   "revenue": 116.9
+ },
+ {
+   "country": "Amerika",
+   "year": 2020,
+   "revenue": 124.5
+ },
+ {
+   "country": "Amerika",
+   "year": 2021,
+   "revenue": 153.3
+ },
+ {
+   "country": "Europa",
+   "year": 2015,
+   "revenue": 50.3
+ },
+ {
+   "country": "Europa",
+   "year": 2016,
+   "revenue": 49.8
+ },
+ {
+   "country": "Europa",
+   "year": 2017,
+   "revenue": 54.9
+ },
+ {
+   "country": "Europa",
+   "year": 2018,
+   "revenue": 62.4
+ },
+ {
+   "country": "Europa",
+   "year": 2019,
+   "revenue": 60.2
+ },
+ {
+   "country": "Europa",
+   "year": 2020,
+   "revenue": 68.6
+ },
+ {
+   "country": "China",
+   "year": 2015,
+   "revenue": 58.7
+ },
+ {
+   "country": "China",
+   "year": 2016,
+   "revenue": 48.5
+ },
+ {
+   "country": "China",
+   "year": 2017,
+   "revenue": 51.6
+ },
+ {
+   "country": "China",
+   "year": 2018,
+   "revenue": 51.9
+ },
+ {
+   "country": "China",
+   "year": 2019,
+   "revenue": 43.6
+ },
+ {
+   "country": "China",
+   "year": 2020,
+   "revenue": 40.3
+ },
+ {
+   "country": "Japan",
+   "year": 2015,
+   "revenue": 15.7
+ },
+ {
+   "country": "Japan",
+   "year": 2016,
+   "revenue": 16.9
+ },
+ {
+   "country": "Japan",
+   "year": 2017,
+   "revenue": 15.3
+ },
+ {
+   "country": "Japan",
+   "year": 2018,
+   "revenue": 21.7
+ },
+ {
+   "country": "Japan",
+   "year": 2019,
+   "revenue": 21.5
+ },
+ {
+   "country": "Japan",
+   "year": 2020,
+   "revenue": 21.4
+ },
+ {
+   "country": "Azië",
+   "year": 2015,
+   "revenue": 15
+ },
+ {
+   "country": "Azië",
+   "year": 2016,
+   "revenue": 13.6
+ },
+ {
+   "country": "Azië",
+   "year": 2017,
+   "revenue": 14.1
+ },
+ {
+   "country": "Azië",
+   "year": 2018,
+   "revenue": 17.4
+ },
+ {
+   "country": "Azië",
+   "year": 2019,
+   "revenue": 17.8
+ },
+ {
+   "country": "Azië",
+   "year": 2020,
+   "revenue": 19.6
+ }
+]
