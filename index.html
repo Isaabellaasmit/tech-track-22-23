@@ -15,48 +15,35 @@
       <button id="on">ON</button>
 
       <!-- Dit is voor de laptop en alle elementen in de laptop -->
-        <section id="overlay">
-          <img id="laptop" src="images/Laptop.svg" alt="SVG geanimeerde Laptop">
+      <section id="overlay">
+        <img id="laptop" src="images/Laptop.svg" alt="SVG geanimeerde Laptop">
 
-          <svg id="chart1" viewbox="0 0 600 500"  width="600" height="500">
-            <g id="titel"></g>
-            <g id="bars" ></g>
-            <g id="labelsBottom"></g>
-            <g id="labelsLeft" transform="translate(120, 290)"></g>      
-            <g id="scaleBottom" transform="translate(100, 400)"></g>
-            <g id="scaleLeft" transform="translate(100, 100)"></g>
-          </svg>
+        <svg id="chart1" viewbox="0 0 600 500"  width="600" height="500">
+          <g id="titel"></g>
+          <g id="bars" ></g>
+          <g id="labelsBottom"></g>
+          <g id="labelsLeft" transform="translate(130, 405)"></g>      
+          <g id="scaleBottom" transform="translate(100, 400)"></g>
+          <g id="scaleLeft" transform="translate(100, 100)"></g>
+        </svg>
 
-          <div class="items">            
-            <button value="Iphone">Iphone</button>
-            <button value="Ipad">Ipad</button>
-            <button value="AppleWatch">Apple Watch</button>
-            <button value="AirPods">Airpods</button>
-            <button value="Mac">Mac</button>
-          </div>
+        <!-- Dan heb je hier de buttons om de data te kunnen filteren van de eerste chart -->
+        <div class="items">            
+          <button value="Iphone">Iphone</button>
+          <button value="Ipad">Ipad</button>
+          <button value="AppleWatch">Apple Watch</button>
+          <button value="AirPods">Airpods</button>
+          <button value="Mac">Mac</button>
+        </div>
 
-          <div class="screen"></div>
-          
-        </section>
+        <!-- Hier het 'scherm' element om de laptop aan en uit te kunnen doen -->
+        <div class="screen"></div>
+      </section>
 
+      <p>Je hebt op de laptop gezien hoeveel producten Apple in de afgelopen jaren heeft verkocht. Bekijk op de kaart hieronder welke landen het meeste Apple producten heeft gekocht.</p>
 
-      
-
-      <!-- <article>
-        <p class="p1">&hellip;en ik verplaats&hellip;</p>
-        <p class="p2">en ik ook.</p>
-        <button class="klik">Klik op mij&hellip;</button>
-      </article> -->
-
-
-      <!-- <svg width="800" height="800">
-        <g id="bars" transform="translate(90, 0)">
-        </g>
-        <g id="labels"></g>
-      </svg> -->
-
-
-      <section>
+      <!-- Hier heb je de section om de chart naast de map te krijgen -->
+      <section class="mapOverlay">
         <svg id="svgMap" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
           viewBox="0 0 1200 675">
         <g id="Afrika">
@@ -116,19 +103,18 @@
         </g>
         </svg>
 
+        <!-- Dit is de chart -->
         <svg id="chart2" viewbox="0 0 800 400"  width="800" height="400">
           <g id="titel2"></g>
           <g id="bars2" transform="translate(90, 0)"></g>
-          <g id="labelsBottom2"></g>
-          <g id="labelsLeft2" transform="translate(0, 20)"></g>      
-          <g id="scaleBottom2" ></g>
-          <g id="scaleLeft2"></g>
+          <g id="labelsright2"></g>
+          <g id="labelsLeft2"></g>      
         </svg>
 
+        <div id="tooltip2"></div>
       </section>
 
-
-
+      <!-- Dit zijn de filter buttons voor de 2e chart -->
       <div class="mapButtons">
         <button id="Europa" value="Europa">Europa</button>
         <button id="Azië" value="Azië">Azië</button>
@@ -137,6 +123,10 @@
         <button id="Japan" value="Japan">Japan</button>
       </div>
    </main>
+
+   <footer>
+    <p>Isabella Smit | 500859821 </p>
+   </footer>
 
     <script type="module" src="./scripts/main.js"></script>
     <script type="module" src="./scripts/revenuemap.js"></script>
