@@ -91,11 +91,13 @@ function makeChart(dataItems) {
                    .range([chartHeight, 0])
                    .domain([0, d3.max(dataItems, (d) => d.sales)])
 
+
                    console.log(typeof dataItems)
 
   const axisLeft = d3.axisLeft(yScale)
                      .tickFormat((d) => d)
                      .ticks(10)
+                     
   
   const axisBottom = d3.axisBottom(xScale)
                        .tickFormat((d) => d)
@@ -106,9 +108,10 @@ function makeChart(dataItems) {
     .selectAll("text")
     .data(dataItems)
     .join("text")
-    .attr("transform", "translate(100,50)")
+    .attr("transform", "translate(180,50)")
     .attr("font-size", "20px")
     .text((d) => "Verkoopcijfers van " + d.item)
+    .attr("fill", "var(--color-text-light)")
   
 
   d3.select("#bars")
@@ -122,10 +125,12 @@ function makeChart(dataItems) {
     .attr("width", xScale.bandwidth())
     .attr("height", (d) => chartHeight - yScale(d.sales))
     .attr("transform", "translate(" + 100 + "," + 100 + ")")
+    .attr("fill", "var(--color-bars")
 
 
     d3.select("#scaleBottom")
       .call(axisBottom)
+      
 
     
     d3.select("#labelsBottom")
@@ -133,6 +138,7 @@ function makeChart(dataItems) {
       .text("Jaar")
       .attr("y", chartHeight + 150)
       .attr("x", chartWidth + 70)
+      .attr("fill", "var(--color-text-light)")
    
     
     d3.select("#scaleLeft") 
@@ -147,6 +153,7 @@ function makeChart(dataItems) {
     .attr("transform", "rotate(-90)")
     .attr("y", 6)
     .attr("dy", "-5.1em")
+    .attr("fill", "var(--color-text-light)")
 
 }
 

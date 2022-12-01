@@ -50,13 +50,16 @@ function makeMap(appleData) {
   .attr('height', yScale.bandwidth())
   .attr('width', d => xScale(d.revenue))
   .attr('y', d => yScale(d.year))
+  .attr("fill", "var(--color-bars")
+  .attr("box-shadow", "10px var(--color-bars-shadow")
 
   d3.select('#labelsLeft2')
   .selectAll('text')
   .data(appleData)
   .join('text')
   .attr('y', d => yScale(d.year))
-  .text(d => d.year);
+  .text(d => d.year)
+  .attr("fill", "var(--color-text-light")
 
 
 //   // const margin = 200
