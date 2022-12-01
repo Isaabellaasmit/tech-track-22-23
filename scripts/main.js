@@ -75,6 +75,8 @@ function makeChart(dataItems) {
                    .range([chartHeight, 0])
                    .domain([0, d3.max(dataItems, (d) => d.sales)])
 
+                   console.log(typeof dataItems)
+
   const axisLeft = d3.axisLeft(yScale)
                      .tickFormat((d) => d)
                      .ticks(10)
@@ -130,7 +132,6 @@ function makeChart(dataItems) {
     .attr("y", 6)
     .attr("dy", "-5.1em")
 
-
 }
 
  window.addEventListener('DOMContentLoaded', (e) => {
@@ -141,8 +142,9 @@ function makeChart(dataItems) {
 
 // EventListener
 function changeMap(e) {
-  // d3.select("#australia, #china, #japan, #europe, #restOfAzia, #africa, #america")
+  // d3.select("#australia", "#china", "#japan", "#europe", "#restOfAzia", "#africa", "#america")
   //   .attr("fill", "black")
+
   d3.select("#australia")
     .attr("fill", "black")
 
@@ -217,62 +219,157 @@ buttons.forEach(button => {
 // })
 // }
 
-function moreData(filterMap) {
-  d3.json("../public/JSON/AppleRevenue.json").then(d => {
 
-    if(filterMap) {
-        d = d.filter(item => {
-          return item.Country === filterMap;
-        })
-    } 
+
+// import appleData from '/public/JSON/AppleRevenue.json' assert {type: "json"};
+// console.log(appleData);
+
+// const appleData = Object.entries(dataRevenue);
+
+// console.log(typeof appleData)
+
+// d3.json("../public/JSON/AppleRevenue.json").then(d => {
+
+//   // let keysData = Object.keys(d);   // convert object's keys into an array
+//   // let arrayData = keysData.map(keysData => d)
+//     showMap(d)
+// })
+
+// function moreData(filterMap) {
+//   d3.json("../public/JSON/AppleRevenue.json").then(d => {
+
+//     if(filterMap) {
+//         d = d.filter(item => {
+//           return item.Country === filterMap;
+//         })
+//     } 
+//     showMap(d)
+// })
+// }
+
+d3.json("../public/JSON/AppleRevenue.json").then(d => {
+
     showMap(d)
 })
-}
 
-// import appleData from '/JSON/AppleRevenue.json' assert {type: "json"};
+
 
 function showMap(appleData) {
 
-    console.log(appleData);
+  console.log(appleData);
 
-const chartWidth = 700
-const chartHeight = 800
+const secondChartWidth = 800
+const secondChartHeight = 400
 
-const xScale = d3.scaleLinear()
-.domain([0, d3.max(appleData, d => d.Revenue)])
-.range([0, chartWidth]);
+const xSchaal = d3.scaleLinear()
+// .domain([0, d3.max(appleData, d => d.Revenue)]) d3.max(d3.values(d.years)
+.range([0, secondChartWidth])
+.domain([0, (d3.max(appleData, d => d.Revenue))])      //(appleData, (d) => d[2])]) Object.values(
 
-const yScale = d3.scaleBand()
+const ySchaal = d3.scaleBand()
 .domain(d3.map(appleData, d => d.Year))
-.range([0, chartHeight])
+.range([0, secondChartHeight])
 .paddingInner(0.05);
 
-d3.select('#bars')
+d3.select('#secondBars')
 .selectAll('rect')
 .data(appleData)
 .join('rect')
-.attr('height', yScale.bandwidth())
-.attr('width', d => xScale(d.Revenue))
-.attr('y', d => yScale(d.Year))
+.attr('height', ySchaal.bandwidth())
+.attr('width', d => xSchaal(d.Revenue))
+.attr('y', d => ySchaal(d.Year))
 
-d3.select('#labels')
+d3.select('#secondLabels')
 .selectAll('text')
 .data(appleData)
 .join('text')
-.attr('y', d => yScale(d.Year) + 15)
+.attr('y', d => ySchaal(d.Year) + 15)
 .text(d => d.Year);
+
 
 }
 
-// showMap("africa")
+ showMap();
 
 
 
-window.addEventListener('DOMContentLoaded', (e) => {
-  d3.selectAll("#mapButtons").on("click", (e) => 
-  moreData(e.target.value));
-  moreData("africa");
-});
+// window.addEventListener('DOMContentLoaded', (e) => {
+//   d3.selectAll("#mapButtons button").on("click", (e) => 
+//   moreData(e.target.value));
+//   // moreData("africa");
+// });
+
+
+
+
+
+
+// function showMap(appleData) {
+
+
+
+//   var margin = {top: 10, right: 30, bottom: 40, left: 100},
+//   width = 460 - margin.left - margin.right,
+//   height = 500 - margin.top - margin.bottom;
+
+// var svg = d3.select("#secondChart")
+// .append("svg")
+//   .attr("width", width + margin.left + margin.right)
+//   .attr("height", height + margin.top + margin.bottom)
+// .append("g")
+//   .attr("transform",
+//         "translate(" + margin.left + "," + margin.top + ")");
+
+
+// // Add X axis
+// var x = d3.scaleLinear()
+//   .domain([0, 13000])
+//   .range([ 0, width]);
+// svg.append("g")
+//   .attr("transform", "translate(0," + height + ")")
+//   .call(d3.axisBottom(x))
+//   .selectAll("text")
+//     .attr("transform", "translate(-10,0)rotate(-45)")
+//     .style("text-anchor", "end");
+
+// // Y axis  (dataItems.map((d) =>d.year))  (Object.values(appleData
+// var y = d3.scaleBand()
+// .range([ 0, height ])
+// .domain(appleData.map((d) => d.Year))
+// .padding(1);
+// svg.append("g")
+// .call(d3.axisLeft(y))
+
+// console.log(typeof appleData)
+
+// // Lines
+// svg.selectAll("myline")
+// .data(appleData)
+// .enter()
+// .append("line")
+//   .attr("x1", function(d) { return x(d.Revenue); })
+//   .attr("x2", x(0))
+//   .attr("y1", function(d) { return y(d.Year); })
+//   .attr("y2", function(d) { return y(d.Year); })
+//   .attr("stroke", "grey")
+
+// // Circles
+// svg.selectAll("mycircle")
+// .data(appleData)
+// .enter()
+// .append("circle")
+//   .attr("cx", function(d) { return x(d.Revenue); })
+//   .attr("cy", function(d) { return y(d.Year); })
+//   .attr("r", "4")
+//   .style("fill", "#69b3a2")
+//   .attr("stroke", "black")
+// }
+
+// showMap();
+
+
+
+
 
 
   
