@@ -57,7 +57,7 @@ console.log('Hello, world!');
 // OM TE FILTEREN
 
 function getData(filterFunction) {
-  d3.json("../public/JSON/itemSales.json").then(d => {
+  d3.json("../public/itemSales.json").then(d => {
 
     if(filterFunction) {
         d = d.filter(item => {
@@ -157,52 +157,46 @@ function makeChart(dataItems) {
   });
 
 // EventListener
-function changeMap(e) {
-  // d3.select("#australia", "#china", "#japan", "#europe", "#restOfAzia", "#africa", "#america")
-  //   .attr("fill", "black")
+// function changeMap(e) {
+//   // d3.select("#australia", "#china", "#japan", "#europe", "#restOfAzia", "#africa", "#america")
+//   //   .attr("fill", "black")
 
-  d3.select("#australia")
-    .attr("fill", "black")
+//   d3.select("#Amerika")
+//     .attr("fill", "black")
 
-  d3.select("#america")
-    .attr("fill", "black")
+//   d3.select("#China")
+//     .attr("fill", "black")
 
-  d3.select("#china")
-    .attr("fill", "black")
+//   d3.select("#Japan")
+//     .attr("fill", "black")
 
-  d3.select("#japan")
-    .attr("fill", "black")
-
-  d3.select("#europe") 
-    .attr("fill", "black") 
+//   d3.select("#Europa") 
+//     .attr("fill", "black") 
   
-  d3.select("#restOfAsia")
-    .attr("fill", "black")
-  
-  d3.select("#africa")
-    .attr("fill", "black")
+//   d3.select("#Azië")
+//     .attr("fill", "black")
   
 
-  let myLand = "#" + e.target.value;
+//   let myLand = "#" + e.target.value;
 
-  let myColor = "var(--color-" + e.target.value; 
+//   let myColor = "var(--color-" + e.target.value; 
 
-  d3.select(myLand)
-    .attr("fill", myColor)
-    .transition()
-    .duration(1000)
+//   d3.select(myLand)
+//     .attr("fill", myColor)
+//     .transition()
+//     .duration(1000)
 
   
-}
+// }
 
-// changeMap("africa");
+// // changeMap("africa");
 
-const buttons = document.querySelectorAll('#mapButtons');
+// const buttons = document.querySelectorAll('.mapButtons');
 
-buttons.forEach(button => {
-	button.addEventListener('click', changeMap);
+// buttons.forEach(button => {
+// 	button.addEventListener('click', changeMap);
   
-})
+// })
 
 
 

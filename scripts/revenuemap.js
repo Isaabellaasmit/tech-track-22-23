@@ -3,33 +3,15 @@ import '../styles/style.css'
 
 // We can use node_modules directely in the browser!
 import * as d3 from 'd3';
+import { filter } from 'd3';
 
 console.log('Hello, world!');
 
 
-// // FILTER VOOR BIJ DE MAP
 
-// function moreData(filterMap) {
-//   d3.json("../public/JSON/AppleRevenue.json").then(d => {
-
-//     if(filterMap) {
-//         d = d.filter(item => {
-//           return item.Country === filterMap;
-//         })
-//     } 
-//     showMap(d)
-// })
-// }
-
-
-// d3.json("../public/JSON/AppleRevenue.json").then(d => {
-
-//     showMap(d)
-// })
-
-
+// Dit is een functie om de chart de filter
 function moreData(filterFunctionMap) {
-  d3.json("../public/JSON/appleRevenue.json").then(d => {
+  d3.json("../public/appleRevenue.json").then(d => {
 
     if(filterFunctionMap) {
         d = d.filter(item => {
@@ -41,7 +23,7 @@ function moreData(filterFunctionMap) {
 }
 
 
-
+//Hier maak ik ik een functie aan om de chart de tekenen met D3
 function makeMap(appleData) {
 
   console.log(appleData);
@@ -72,6 +54,25 @@ function makeMap(appleData) {
   const axisBottom = d3.axisBottom(xScale)
                        .tickFormat((d) => d)
                        .ticks(10)
+
+
+// const secondChartWidth = 800
+// const secondChartHeight = 400
+
+// const xSchaal = d3.scaleLinear()
+// // .domain([0, d3.max(appleData, d => d.Revenue)]) //d3.max(d3.values(d.years)
+// .range([0, secondChartWidth])
+// .domain([0, (d3.max(appleData, d => d.Revenue))])      //(d3.max(Object.values(appleData), d => d.Revenue))]) 
+
+//   console.log(typeof appleData);
+
+// const ySchaal = d3.scaleBand()
+// .domain(d3.map(appleData, d => d.Year))
+// .range([0, secondChartHeight])
+// .paddingInner(0.05);
+
+
+
 
 
   d3.select("#titel2")
@@ -122,36 +123,23 @@ function makeMap(appleData) {
 
 }
 
- window.addEventListener('DOMContentLoaded', (e) => {
-      d3.selectAll("div.mapButtons button").on("click", (e) => 
-      moreData(e.target.value));
-      // moreData("africa");
-  });
 
 // EventListener
 function changeMap(e) {
-  // d3.select("#australia", "#china", "#japan", "#europe", "#restOfAzia", "#africa", "#america")
-  //   .attr("fill", "black")
 
-  d3.select("#australia")
+  d3.select("#Amerika")
     .attr("fill", "black")
 
-  d3.select("#america")
+  d3.select("#China")
     .attr("fill", "black")
 
-  d3.select("#china")
+  d3.select("#Japan")
     .attr("fill", "black")
 
-  d3.select("#japan")
-    .attr("fill", "black")
-
-  d3.select("#europe") 
+  d3.select("#Europa") 
     .attr("fill", "black") 
   
-  d3.select("#restOfAsia")
-    .attr("fill", "black")
-  
-  d3.select("#africa")
+  d3.select("#Azië")
     .attr("fill", "black")
   
 
@@ -169,12 +157,20 @@ function changeMap(e) {
 
 // changeMap("africa");
 
-const buttons = document.querySelectorAll('#mapButtons');
+const buttons = document.querySelectorAll('.mapButtons');
 
 buttons.forEach(button => {
 	button.addEventListener('click', changeMap);
   
 })
+
+
+
+window.addEventListener('DOMContentLoaded', (e) => {
+  d3.selectAll("div.mapButtons button").on("click", (e) => 
+  moreData(e.target.value));
+  moreData("Amerika");
+});
 
 // function showMap(appleData) {
 
