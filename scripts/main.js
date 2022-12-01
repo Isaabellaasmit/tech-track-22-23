@@ -57,7 +57,7 @@ console.log('Hello, world!');
 // OM TE FILTEREN
 
 function getData(filterFunction) {
-  d3.json("../public/itemSales.json").then(d => {
+  d3.json("../itemSales.json").then(d => {
 
     if(filterFunction) {
         d = d.filter(item => {

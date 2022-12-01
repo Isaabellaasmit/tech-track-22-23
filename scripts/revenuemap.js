@@ -11,7 +11,7 @@ console.log('Hello, world!');
 
 // Dit is een functie om de chart de filter
 function moreData(filterFunctionMap) {
-  d3.json("../public/appleRevenue.json").then(d => {
+  d3.json("../appleRevenue.json").then(d => {
 
     if(filterFunctionMap) {
         d = d.filter(item => {
