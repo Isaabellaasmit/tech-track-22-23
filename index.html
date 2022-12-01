@@ -115,24 +115,29 @@
         </g>
         </svg>
 
-        <svg id="secondChart" width="800" height="400">
-          <g id="secondBars" transform="translate(90, 0)"></g>
-          <g id="secondLabels"></g>
-          <g></g>
+        <svg id="chart2" viewbox="0 0 600 500"  width="600" height="500">
+          <g id="titel2"></g>
+          <g id="bars2" ></g>
+          <g id="labelsBottom2"></g>
+          <g id="labelsLeft2" transform="translate(120, 290)"></g>      
+          <g id="scaleBottom2" transform="translate(100, 400)"></g>
+          <g id="scaleLeft2" transform="translate(100, 100)"></g>
         </svg>
+
       </section>
 
-      <div id="mapButtons">
-        <button value="africa">Afrika</button>
-        <button value="europe">Europa</button>
-        <button value="restOfAsia">Overig Azië</button>
-        <button value="australia">Australië</button>
-        <button value="japan">Japan</button>
-        <button value="america">Amerika</button>
-        <button value="china">China</button>
+
+
+      <div class="mapButtons">
+        <button value="Europa">Europa</button>
+        <button value="Overig Azië">Overig Azië</button>
+        <button value="Japan">Japan</button>
+        <button value="Amerika">Amerika</button>
+        <button value="China">China</button>
       </div>
    </main>
 
     <script type="module" src="./scripts/main.js"></script>
+    <script type="module" src="./scripts/revenuemap.js"></script>
   </body>
 </html>

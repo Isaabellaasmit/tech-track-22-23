@@ -204,9 +204,6 @@ buttons.forEach(button => {
   
 })
 
-// document.querySelector("body > form").addEventListener('change', function(event){
-//   document.querySelector(".👨‍🦲").dataset.mood = event.target.value;
-// });
 
 
 
@@ -265,51 +262,51 @@ buttons.forEach(button => {
 // import appleData from '/public/JSON/AppleRevenue.json' assert {type: "json"};
 // console.log(appleData);
 
-d3.json("../public/JSON/AppleRevenue.json").then(d => {
+// d3.json("../public/JSON/AppleRevenue.json").then(d => {
 
-    showMap(d)
-})
-
-
-
-function showMap(appleData) {
-
-  console.log(appleData);
-
-const secondChartWidth = 800
-const secondChartHeight = 400
-
-const xSchaal = d3.scaleLinear()
-// .domain([0, d3.max(appleData, d => d.Revenue)]) //d3.max(d3.values(d.years)
-.range([0, secondChartWidth])
-.domain([0, (d3.max(appleData, d => d.Revenue))])      //(d3.max(Object.values(appleData), d => d.Revenue))]) 
-
-  console.log(typeof appleData);
-
-const ySchaal = d3.scaleBand()
-.domain(d3.map(appleData, d => d.Year))
-.range([0, secondChartHeight])
-.paddingInner(0.05);
-
-d3.select('#secondBars')
-.selectAll('rect')
-.data(appleData)
-.join('rect')
-.attr('height', ySchaal.bandwidth())
-.attr('width', d => xSchaal(d.Revenue))
-.attr('y', d => ySchaal(d.Year))
-
-d3.select('#secondLabels')
-.selectAll('text')
-.data(appleData)
-.join('text')
-.attr('y', d => ySchaal(d.Year) + 15)
-.text(d => d.Year);
+//     showMap(d)
+// })
 
 
-}
 
- showMap();
+// function showMap(appleData) {
+
+//   console.log(appleData);
+
+// const secondChartWidth = 800
+// const secondChartHeight = 400
+
+// const xSchaal = d3.scaleLinear()
+// // .domain([0, d3.max(appleData, d => d.Revenue)]) //d3.max(d3.values(d.years)
+// .range([0, secondChartWidth])
+// .domain([0, (d3.max(appleData, d => d.Revenue))])      //(d3.max(Object.values(appleData), d => d.Revenue))]) 
+
+//   console.log(typeof appleData);
+
+// const ySchaal = d3.scaleBand()
+// .domain(d3.map(appleData, d => d.Year))
+// .range([0, secondChartHeight])
+// .paddingInner(0.05);
+
+// d3.select('#secondBars')
+// .selectAll('rect')
+// .data(appleData)
+// .join('rect')
+// .attr('height', ySchaal.bandwidth())
+// .attr('width', d => xSchaal(d.Revenue))
+// .attr('y', d => ySchaal(d.Year))
+
+// d3.select('#secondLabels')
+// .selectAll('text')
+// .data(appleData)
+// .join('text')
+// .attr('y', d => ySchaal(d.Year) + 15)
+// .text(d => d.Year);
+
+
+// }
+
+//  showMap();
 
 
 
